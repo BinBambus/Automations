@@ -1,0 +1,22 @@
+Von github.com:BinBambus/Automations
+ * branch            main       -> FETCH_HEAD
+   d8e4bb8..7e18869  main       -> origin/main
+Aktualisiere d8e4bb8..7e18869
+Fast-forward
+ Bachelorarbeit-Note/Scraper.py    |  4 ----
+ Bachelorarbeit-Note/operator.bash | 30 ++++++++++++------------------
+ 2 files changed, 12 insertions(+), 22 deletions(-)
+1. Öffne Startseite...
+2. Klicke auf Login/Anmelden...
+3. Auf Shibboleth IdP weitergeleitet. Gebe Zugangsdaten ein...
+4. Warte auf Rückleitung ins HISinOne-Portal...
+-> Erfolgreich eingeloggt!
+5. Navigiere im Menü...
+6. Starte Download der Leistungsübersicht...
+Erfolg! PDF gespeichert als: Leistungsuebersicht.pdf
+Gefundene Zeilen zur Bachelorarbeit:
+Bachelor-Arbeit PNr 2601 PV
+Bachelor-Arbeit - BA 23.07.2026 1 ZU Nein
+Bachelorarbeit gefunden (Status: angemeldet / ZU), aber noch keine Note eingetragen.
+Noch kein neuer Eintrag – keine E-Mail nötig.
+Alte PDF-Datei 'Leistungsuebersicht.pdf' gelöscht.
