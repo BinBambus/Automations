@@ -1,0 +1,4 @@
+pip install pypdf python-dotenv
+
+pip install playwright
+playwright install chromium
