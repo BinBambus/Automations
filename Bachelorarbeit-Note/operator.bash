@@ -1,35 +1,29 @@
 #!/bin/bash
-
-# 1. In das Hauptverzeichnis deines Projekts wechseln
-cd /home/pi/Automations/Bachelorarbeit-Note
+cd /home/pi/Automations/Bachelorarbeit-Note || exit 1
 
 PDF_FILE="Leistungsuebersicht.pdf"
 
-# Prüfen, ob die PDF bereits existiert
+# 1. Prüfen, ob die PDF bereits existiert
 if [ -f "$PDF_FILE" ]; then
-    git add jobs.log
-    git add "$PDF_FILE"
-    git diff-index --quiet HEAD || git commit -m "Automatischer Commit: Neue Logs und PDF-Datei"
-    git push origin main
-
     echo "Die Datei '$PDF_FILE' existiert bereits. Skripte werden übersprungen."
     exit 0
 fi
 
-# 2. Das virtuelle Environment aktivieren
+# 2. Virtual Environment aktivieren
 source venv/bin/activate
 
-# 3. Die aktuelle Version von GitHub holen
+# 3. Neuesten Code holen
 git pull origin main
 
-# 4. Die Python-Skripte ausführen
-python3 Scraper.py
-python3 EmailVersand.py
+# 4. Skripte unbuffered (-u) ausführen
+python3 -u Scraper.py
+python3 -u EmailVersand.py
 
-# Loggen, ob die Skripte erfolgreich waren
+# 5. Git Commit & Push (nur wenn sich im Log etwas geändert hat)
 git add jobs.log
-git diff-index --quiet HEAD || git commit -m "Automatischer Commit: Neues Log"
-git push origin main
+git diff-index --quiet HEAD || {
+    git commit -m "Automatischer Log-Update $(date '+%Y-%m-%d %H:%M:%S')"
+    git push origin main
+}
 
-# 5. Environment wieder deaktivieren
 deactivate
