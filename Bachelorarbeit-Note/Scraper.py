@@ -14,7 +14,7 @@ START_URL = "https://cim.hs-mainz.de/qisserver/pages/cs/sys/portal/hisinoneStart
 
 if os.path.exists("jobs.log"):
     os.remove("jobs.log")
-    os.create("jobs.log")
+    os.open("jobs.log", os.O_CREAT | os.O_WRONLY)
 
 with sync_playwright() as p:
     # headless=False zum Debuggen – setze es später auf True, wenn alles läuft
