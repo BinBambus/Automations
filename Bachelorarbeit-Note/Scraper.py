@@ -12,6 +12,10 @@ OUTPUT_FILE = "Leistungsuebersicht.pdf"
 
 START_URL = "https://cim.hs-mainz.de/qisserver/pages/cs/sys/portal/hisinoneStartPage.faces"
 
+if os.path.exists("jobs.log"):
+    os.remove("jobs.log")
+    os.create("jobs.log")
+
 with sync_playwright() as p:
     # headless=False zum Debuggen – setze es später auf True, wenn alles läuft
     browser = p.chromium.launch(headless=True)
