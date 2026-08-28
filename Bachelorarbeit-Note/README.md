@@ -4,9 +4,9 @@ Der Bachelorarbeits-Noten Scraper ist ein Tool, welches mit *playwrite* die **Le
 Wird eine neue Note für die Bachelorarbeit gefunden wird eine Automatisierte Email an den Nutzer verschickt mit PDF und Note im Titel.
 
 
-## Projekt aufbau
+## Environment Setup
 
-### 1 Konfigurationsdatei *.env*
+### 1. Konfigurationsdatei *.env*
 
 Beispielsdatei:
 ```
@@ -42,7 +42,8 @@ chmod +x operator.bash
 
 ### 2. Automatisiert mit CRON
 ``` bash
-# 1. Cronjobs öffnen
+# 1. Berechtigungen und Cronjobs öffnen
+chmod +x operator.bash
 crontab -e
 # 2. Neuen Eintrag erstellen (Rennt Alle 5 minuten)
 */5 * * * * /home/Automations/Bachelorarbeit-Note/operator.bash > /home/Automations/Bachelorarbeit-Note/jobs.log 2>&1
