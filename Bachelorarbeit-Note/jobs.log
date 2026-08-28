@@ -1,13 +1,10 @@
 Von github.com:BinBambus/Automations
  * branch            main       -> FETCH_HEAD
-   8b08a1d..d0a81b5  main       -> origin/main
-Aktualisiere 8b08a1d..d0a81b5
+   e5f303e..5192718  main       -> origin/main
+Aktualisiere e5f303e..5192718
 Fast-forward
- Bachelorarbeit-Note/README.md        | 50 ++++++++++++++++++++++++++++++++++++
- Bachelorarbeit-Note/requirements.txt |  4 ---
- 2 files changed, 50 insertions(+), 4 deletions(-)
- create mode 100644 Bachelorarbeit-Note/README.md
- delete mode 100644 Bachelorarbeit-Note/requirements.txt
+ Bachelorarbeit-Note/README.md | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
 1. Öffne Startseite...
 2. Klicke auf Login/Anmelden...
 3. Auf Shibboleth IdP weitergeleitet. Gebe Zugangsdaten ein...
