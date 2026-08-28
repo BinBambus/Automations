@@ -1,6 +1,9 @@
-Von github.com:BinBambus/Automations
- * branch            main       -> FETCH_HEAD
-Bereits aktuell.
+kex_exchange_identification: Connection closed by remote host
+Connection closed by 140.82.121.3 port 22
+Schwerwiegend: Konnte nicht vom Remote-Repository lesen.
+
+Bitte stellen Sie sicher, dass die korrekten Zugriffsberechtigungen bestehen
+und das Repository existiert.
 1. Öffne Startseite...
 Traceback (most recent call last):
   File "/home/pi/Automations/Bachelorarbeit-Note/Scraper.py", line 22, in <module>
