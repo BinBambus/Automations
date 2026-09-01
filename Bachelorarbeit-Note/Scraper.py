@@ -14,7 +14,7 @@ START_URL = "https://cim.hs-mainz.de/qisserver/pages/cs/sys/portal/hisinoneStart
 
 with sync_playwright() as p:
     # headless=False zum Debuggen – setze es später auf True, wenn alles läuft
-    browser = p.chromium.launch(headless=True)
+    browser = p.chromium.launch(headless=False)
     context = browser.new_context(accept_downloads=True)
     page = context.new_page()
 
@@ -61,6 +61,12 @@ with sync_playwright() as p:
 
     # 3. Untermenüpunkt (z.B. "Leistungen" / "Notenspiegel")
     page.locator("[id='widgetRender:4:burgerNavi:1:3:link2']").first.click()
+    page.wait_for_load_state("networkidle")
+
+    # 4. Bachelornotenspiegel auswählen (falls mehrere Studiengänge vorhanden)
+    page.locator("[name='examsReadonly:degreeProgramProgressForReportAsTree:studyHistoryTree:0:0:0:0:checkTick']").first.click()
+    page.wait_for_load_state("networkidle")
+    page.locator("[name='examsReadonly:degreeProgramProgressForReportAsTree:studyHistoryTree:0:1:checkAll']").first.click()
     page.wait_for_load_state("networkidle")
 
     # 6. PDF-Download auslösen
