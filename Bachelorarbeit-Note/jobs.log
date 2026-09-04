@@ -5,13 +5,28 @@ Bereits aktuell.
 2. Klicke auf Login/Anmelden...
 3. Auf Shibboleth IdP weitergeleitet. Gebe Zugangsdaten ein...
 4. Warte auf Rückleitung ins HISinOne-Portal...
--> Erfolgreich eingeloggt!
-5. Navigiere im Menü...
-6. Starte Download der Leistungsübersicht...
-Erfolg! PDF gespeichert als: Leistungsuebersicht.pdf
-Gefundene Zeilen zur Bachelorarbeit:
-Bachelor-Arbeit PNr 2601 PV
-Bachelor-Arbeit - BA 23.07.2026 1 ZU Nein
-Bachelorarbeit gefunden (Status: angemeldet / ZU), aber noch keine Note eingetragen.
+Traceback (most recent call last):
+  File "/home/pi/Automations/Bachelorarbeit-Note/Scraper.py", line 45, in <module>
+    page.wait_for_url("https://cim.hs-mainz.de/**")
+  File "/home/pi/Automations/Bachelorarbeit-Note/venv/lib/python3.11/site-packages/playwright/sync_api/_generated.py", line 10029, in wait_for_url
+    self._sync(
+  File "/home/pi/Automations/Bachelorarbeit-Note/venv/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/home/pi/Automations/Bachelorarbeit-Note/venv/lib/python3.11/site-packages/playwright/_impl/_page.py", line 588, in wait_for_url
+    return await self._main_frame.wait_for_url(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi/Automations/Bachelorarbeit-Note/venv/lib/python3.11/site-packages/playwright/_impl/_frame.py", line 288, in wait_for_url
+    async with self.expect_navigation(
+  File "/home/pi/Automations/Bachelorarbeit-Note/venv/lib/python3.11/site-packages/playwright/_impl/_event_context_manager.py", line 33, in __aexit__
+    await self._future
+  File "/home/pi/Automations/Bachelorarbeit-Note/venv/lib/python3.11/site-packages/playwright/_impl/_frame.py", line 270, in continuation
+    await self._wait_for_load_state_impl(state=waitUntil, timeout=t)
+  File "/home/pi/Automations/Bachelorarbeit-Note/venv/lib/python3.11/site-packages/playwright/_impl/_frame.py", line 326, in _wait_for_load_state_impl
+    await waiter.result()
+playwright._impl._errors.TimeoutError: Timeout 28316ms exceeded.
+=========================== logs ===========================
+"domcontentloaded" event fired
+============================================================
+PDF-Datei nicht gefunden.
 Noch kein neuer Eintrag – keine E-Mail nötig.
-Alte PDF-Datei 'Leistungsuebersicht.pdf' gelöscht.
