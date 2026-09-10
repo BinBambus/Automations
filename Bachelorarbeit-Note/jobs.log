@@ -47,13 +47,13 @@ Call log:
       - waiting 100ms
       - waiting for element to be visible, enabled and stable
       - element is not stable
-  11 × retrying click action
-       - waiting 500ms
-       - waiting for element to be visible, enabled and stable
-       - element is visible, enabled and stable
-       - scrolling into view if needed
-       - done scrolling
-       - <div id="global-waiting" class="curtainBackgroundTransparent loadingTopAnimation waitingCursor">…</div> intercepts pointer events
+  7 × retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div id="global-waiting" class="curtainBackgroundTransparent loadingTopAnimation waitingCursor">…</div> intercepts pointer events
   - retrying click action
     - waiting 500ms
     - waiting for element to be visible, enabled and stable
@@ -67,13 +67,20 @@ Call log:
       - <div id="global-waiting" class="curtainBackgroundTransparent loadingTopAnimation waitingCursor">…</div> intercepts pointer events
     - retrying click action
     - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div id="global-waiting" class="curtainBackgroundTransparent loadingTopAnimation waitingCursor">…</div> intercepts pointer events
+    - retrying click action
+      - waiting 100ms
     - waiting for element to be visible, enabled and stable
     - element is visible, enabled and stable
     - scrolling into view if needed
     - done scrolling
     - <div id="global-waiting" class="curtainBackgroundTransparent loadingTopAnimation waitingCursor">…</div> intercepts pointer events
   - retrying click action
-    - waiting 100ms
+    - waiting 500ms
     - waiting for element to be visible, enabled and stable
     - element is visible, enabled and stable
     - scrolling into view if needed
