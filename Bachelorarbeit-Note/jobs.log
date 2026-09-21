@@ -3,10 +3,9 @@ Von github.com:BinBambus/Automations
 Bereits aktuell.
 1. Öffne Startseite...
 2. Klicke auf Login/Anmelden...
-3. Auf Shibboleth IdP weitergeleitet. Gebe Zugangsdaten ein...
 Traceback (most recent call last):
-  File "/home/pi/Automations/Bachelorarbeit-Note/Scraper.py", line 41, in <module>
-    page.locator("button[type='submit']").first.click()
+  File "/home/pi/Automations/Bachelorarbeit-Note/Scraper.py", line 28, in <module>
+    page.locator("button:has-text('Zur Anmeldung')").first.click()
   File "/home/pi/Automations/Bachelorarbeit-Note/venv/lib/python3.11/site-packages/playwright/sync_api/_generated.py", line 17876, in click
     self._sync(
   File "/home/pi/Automations/Bachelorarbeit-Note/venv/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
@@ -24,16 +23,30 @@ Traceback (most recent call last):
     raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
 playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
 Call log:
-  - waiting for locator("button[type='submit']").first
-    - locator resolved to <button type="submit" name="_eventId_proceed" onclick="this.childNodes[0].nodeValue='Logging in, please wait...'">Login</button>
+  - waiting for locator("button:has-text('Zur Anmeldung')").first
+    - locator resolved to <button type="submit" aria-label="" aria-hidden="false" value="Zur Anmeldung" id="widgetRender:12:formLoginOverlay:new_login_overlay:overlayShowButton" name="widgetRender:12:formLoginOverlay:new_login_overlay:overlayShowButton" class="iconfont-arrow_right_fat submit_highlighted_text_iconfont orange login_overlay_button overlayShowButton short-waiting-behavior submit" onclick="jsf.util.chain(this, event,'jsf.ajax.request(this,event,{execute:\'@this \',render:\'widgetRender:12:formLoginOverlay:new_login…>…</button>
   - attempting click action
-    - waiting for element to be visible, enabled and stable
-    - element is visible, enabled and stable
-    - scrolling into view if needed
-    - done scrolling
-    - performing click action
-    - click action done
-    - waiting for scheduled navigations to finish
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div id="alert-modal" class="alert-modal"></div> intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div id="alert-modal" class="alert-modal"></div> intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    58 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div id="alert-modal" class="alert-modal"></div> intercepts pointer events
+     - retrying click action
+       - waiting 500ms
 
 PDF-Datei nicht gefunden.
 Noch kein neuer Eintrag – keine E-Mail nötig.
