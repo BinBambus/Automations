@@ -3,14 +3,9 @@ Von github.com:BinBambus/Automations
 Bereits aktuell.
 1. Öffne Startseite...
 2. Klicke auf Login/Anmelden...
-3. Auf Shibboleth IdP weitergeleitet. Gebe Zugangsdaten ein...
-4. Warte auf Rückleitung ins HISinOne-Portal...
--> Erfolgreich eingeloggt!
-5. Navigiere im Menü...
-6. Starte Download der Leistungsübersicht...
 Traceback (most recent call last):
-  File "/home/pi/Automations/Bachelorarbeit-Note/Scraper.py", line 77, in <module>
-    page.locator("button:has-text('Leistungsübersicht (alle Versuche) [PDF]')").first.click()
+  File "/home/pi/Automations/Bachelorarbeit-Note/Scraper.py", line 28, in <module>
+    page.locator("button:has-text('Zur Anmeldung')").first.click()
   File "/home/pi/Automations/Bachelorarbeit-Note/venv/lib/python3.11/site-packages/playwright/sync_api/_generated.py", line 17876, in click
     self._sync(
   File "/home/pi/Automations/Bachelorarbeit-Note/venv/lib/python3.11/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
@@ -28,59 +23,30 @@ Traceback (most recent call last):
     raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
 playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
 Call log:
-  - waiting for locator("button:has-text('Leistungsübersicht (alle Versuche) [PDF]')").first
-    - locator resolved to <button type="submit" class="submit_print_pdf immediate" value="Leistungsübersicht (alle Versuche) [PDF]" id="examsReadonly:exaReports:fieldset_exaReports:printReport_1" name="examsReadonly:exaReports:fieldset_exaReports:printReport_1" onclick="return myfaces.oam.submitForm('examsReadonly','examsReadonly:exaReports:fieldset_exaReports:printReport_1',null,[['DISABLE_VALIDATION','true']]);">…</button>
+  - waiting for locator("button:has-text('Zur Anmeldung')").first
+    - locator resolved to <button type="submit" aria-label="" aria-hidden="false" value="Zur Anmeldung" id="widgetRender:12:formLoginOverlay:new_login_overlay:overlayShowButton" name="widgetRender:12:formLoginOverlay:new_login_overlay:overlayShowButton" class="iconfont-arrow_right_fat submit_highlighted_text_iconfont orange login_overlay_button overlayShowButton short-waiting-behavior submit" onclick="jsf.util.chain(this, event,'jsf.ajax.request(this,event,{execute:\'@this \',render:\'widgetRender:12:formLoginOverlay:new_login…>…</button>
   - attempting click action
     2 × waiting for element to be visible, enabled and stable
       - element is visible, enabled and stable
       - scrolling into view if needed
       - done scrolling
-      - <div id="global-waiting" class="curtainBackgroundTransparent loadingTopAnimation waitingCursor">…</div> intercepts pointer events
+      - <div id="alert-modal" class="alert-modal"></div> intercepts pointer events
     - retrying click action
     - waiting 20ms
-    - waiting for element to be visible, enabled and stable
-    - element is visible, enabled and stable
-    - scrolling into view if needed
-    - done scrolling
-    - <div id="global-waiting" class="curtainBackgroundTransparent loadingTopAnimation waitingCursor">…</div> intercepts pointer events
-  2 × retrying click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div id="alert-modal" class="alert-modal"></div> intercepts pointer events
+    - retrying click action
       - waiting 100ms
-      - waiting for element to be visible, enabled and stable
-      - element is not stable
-  8 × retrying click action
-      - waiting 500ms
-      - waiting for element to be visible, enabled and stable
-      - element is visible, enabled and stable
-      - scrolling into view if needed
-      - done scrolling
-      - <div id="global-waiting" class="curtainBackgroundTransparent loadingTopAnimation waitingCursor">…</div> intercepts pointer events
-  - retrying click action
-    - waiting 500ms
-    - waiting for element to be visible, enabled and stable
-  - element was detached from the DOM, retrying
-    - locator resolved to <button type="submit" class="submit_print_pdf immediate" value="Leistungsübersicht (alle Versuche) [PDF]" id="examsReadonly:exaReports:fieldset_exaReports:printReport_1" name="examsReadonly:exaReports:fieldset_exaReports:printReport_1" onclick="return myfaces.oam.submitForm('examsReadonly','examsReadonly:exaReports:fieldset_exaReports:printReport_1',null,[['DISABLE_VALIDATION','true']]);">…</button>
-  - attempting click action
-    2 × waiting for element to be visible, enabled and stable
-      - element is visible, enabled and stable
-      - scrolling into view if needed
-      - done scrolling
-      - <div id="global-waiting" class="curtainBackgroundTransparent loadingTopAnimation waitingCursor">…</div> intercepts pointer events
-    - retrying click action
-    - waiting 20ms
-    - waiting for element to be visible, enabled and stable
-    - element is visible, enabled and stable
-    - scrolling into view if needed
-    - done scrolling
-    - <div id="global-waiting" class="curtainBackgroundTransparent loadingTopAnimation waitingCursor">…</div> intercepts pointer events
-  - retrying click action
-    - waiting 100ms
-    - waiting for element to be visible, enabled and stable
-    - element is visible, enabled and stable
-    - scrolling into view if needed
-    - done scrolling
-    - performing click action
-    - click action done
-    - waiting for scheduled navigations to finish
+    58 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div id="alert-modal" class="alert-modal"></div> intercepts pointer events
+     - retrying click action
+       - waiting 500ms
 
 PDF-Datei nicht gefunden.
 Noch kein neuer Eintrag – keine E-Mail nötig.
