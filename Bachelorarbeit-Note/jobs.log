@@ -1,6 +1,8 @@
-Von github.com:BinBambus/Automations
- * branch            main       -> FETCH_HEAD
-Bereits aktuell.
+git@github.com: Permission denied (publickey).
+Schwerwiegend: Konnte nicht vom Remote-Repository lesen.
+
+Bitte stellen Sie sicher, dass die korrekten Zugriffsberechtigungen bestehen
+und das Repository existiert.
 1. Öffne Startseite...
 2. Klicke auf Login/Anmelden...
 3. Auf Shibboleth IdP weitergeleitet. Gebe Zugangsdaten ein...
